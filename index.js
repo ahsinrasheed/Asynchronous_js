@@ -32,9 +32,20 @@ const getDogPic = async () => {
     } catch (err) {
         console.log(err.message);
     }
+    return '2: READY.'
 }
 
-getDogPic();
+(async () => {
+    try {
+        
+        console.log('1: will get dog pics!');
+        const x = await getDogPic();
+        console.log(x);
+        console.log('3: Done getting dog pics!');
+    } catch (err) {
+    console.log("ERROR");
+    }
+})();
 
 // ---------- Chaining the promise......
 /*
